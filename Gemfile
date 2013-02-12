@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.11'
 gem 'sqlite3', '1.3.7'
 gem 'jquery-rails', '2.2.1'
+gem 'heroku',  '2.32.6'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
