@@ -18,3 +18,7 @@ end
 group :test do
   gem 'webrat', '0.7.3'
 end
+
+group :production do
+  gem 'pg', '0.14.1'
+end
