@@ -18,6 +18,7 @@ end
 
 group :test do
   gem 'webrat', '0.7.3'
+  gem 'spork', '0.9.2'
 end
 
 group :production do
