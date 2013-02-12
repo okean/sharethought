@@ -1,0 +1,1 @@
+# Sharethought social network app on Ruby on Rails
