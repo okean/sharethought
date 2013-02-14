@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-gem 'sqlite3', '1.3.7'
 gem 'jquery-rails', '2.2.1'
 gem 'heroku',  '2.32.6'
 
@@ -14,6 +13,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.12.0'
   gem 'thin', '1.5.0'
+  gem 'sqlite3', '1.3.7'
 end
 
 group :test do
