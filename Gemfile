@@ -14,6 +14,7 @@ group :development, :test do
   gem 'rspec-rails', '2.12.0'
   gem 'thin', '1.5.0'
   gem 'sqlite3', '1.3.7'
+  gem 'annotate', '2.5.0'
 end
 
 group :test do

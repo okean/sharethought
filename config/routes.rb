@@ -1,6 +1,4 @@
 Sharethought::Application.routes.draw do
-  get "users/new"
-  
   match '/signup',  :to => "users#new"
 
   match '/contact', :to => 'pages#contact'
@@ -8,6 +6,8 @@ Sharethought::Application.routes.draw do
   match '/about',   :to => 'pages#about'
   
   root :to => 'pages#home'
+  
+  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
