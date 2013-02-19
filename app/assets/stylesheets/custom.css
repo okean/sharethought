@@ -40,17 +40,17 @@ section h1 {
 
 /* Links */
 
-a {
+a.nav {
   color: #fff;
   text-decoration: none;
 }
 
-a:hover, a:focus {
+a.nav:hover, a.nav:focus {
   color: #fff;
   text-decoration: underline;
 }
 
-a:visited {
+a.nav:visited {
   color: #fff;
 }
 
@@ -82,7 +82,7 @@ nav ul li a {
   font-weight: bold;
 }
 
-nav ul li a:visited {
+nav ul li a.nav:visited {
   color: #fff;
 }
 

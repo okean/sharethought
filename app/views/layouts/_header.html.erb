@@ -1,9 +1,14 @@
 <header>
   <nav class="round">
     <ul>
-      <li><%= link_to 'Home', root_path %></li>
-      <li><%= link_to 'Help', help_path %></li>
-      <li><%= link_to 'Sign in', '#' %></li>
+      <li><%= link_to 'Home', root_path, class: "nav" %></li>
+      <li><%= link_to 'Help', help_path, class: "nav" %></li>
+      <% if signed_in? %>
+        <li><%= link_to 'Profile', current_user, class: "nav" %></li>
+        <li><%= link_to 'Sign out', signout_path, method: :delete, class: "nav" %></li>
+      <% else %>
+        <li><%= link_to 'Sign in', signin_path, class: "nav" %></li>
+      <% end %>
     </ul>
   </nav>
   <%= link_to 'Sharethought', root_path, id: "logo", class: "round" %>
