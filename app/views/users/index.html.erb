@@ -1,0 +1,9 @@
+<h1>All users</h1>
+
+<%= render 'shared/pagination', object: @users %>
+
+<ul class="users" >
+  <%= render @users %>
+</ul>
+
+<%= render 'shared/pagination', object: @users %>

@@ -40,18 +40,16 @@ section h1 {
 
 /* Links */
 
-a.nav {
+nav a, nav a:hover, nav a:visited, nav a:focus {
   color: #fff;
+}
+
+a {
   text-decoration: none;
 }
 
-a.nav:hover, a.nav:focus {
-  color: #fff;
+a:hover, a:focus {
   text-decoration: underline;
-}
-
-a.nav:visited {
-  color: #fff;
 }
 
 /* Navigation */
@@ -201,3 +199,63 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+/* Users on 'users#index' page*/
+
+ul.users {
+  margin-bottom: 0;
+}
+
+.users li {
+  list-style: none;
+}
+
+/* Pagination */
+
+.digg_pagination {
+    margin: 0.5em 0 1em 0;
+  background: white;
+  cursor: default;
+  /* self-clearing method: */ }
+  .digg_pagination a, .digg_pagination span, .digg_pagination em {
+    padding: 0.01em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .digg_pagination .disabled {
+    color: #999999;
+    border: 1px solid #dddddd; }
+  .digg_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #B2D234;
+    color: white;
+    border: 1px solid #B2D234; }
+  .digg_pagination a {
+    text-decoration: none;
+    color: #B2D234;
+    border: 1px solid #B2D234; }
+    .digg_pagination a:hover, .digg_pagination a:focus {
+      color: #2AAFDC;
+      border-color: #2AAFDC; }
+  .digg_pagination .page_info {
+    background: #B2D234;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .digg_pagination .page_info b {
+      color: #2AAFDC;
+      background:#2AAFDC;
+      padding: 0.1em 0.25em; }
+  .digg_pagination:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .digg_pagination {
+    height: 1%; }
+  *:first-child + html .digg_pagination {
+    overflow: hidden; }

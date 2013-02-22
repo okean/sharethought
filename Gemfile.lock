@@ -52,6 +52,8 @@ GEM
     factory_girl_rails (4.1.0)
       factory_girl (~> 4.1.0)
       railties (>= 3.0.0)
+    faker (1.1.2)
+      i18n (~> 0.5)
     gravatar_image_tag (1.0.0.pre2)
     heroku (2.32.6)
       heroku-api (~> 0.3.5)
@@ -148,6 +150,7 @@ GEM
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
+    will_paginate (3.0.3)
 
 PLATFORMS
   x86-mingw32
@@ -156,6 +159,7 @@ DEPENDENCIES
   annotate (= 2.5.0)
   coffee-rails (~> 3.2.1)
   factory_girl_rails (~> 4.0)
+  faker (= 1.1.2)
   gravatar_image_tag (= 1.0.0.pre2)
   heroku (= 2.32.6)
   jquery-rails (= 2.2.1)
@@ -168,3 +172,4 @@ DEPENDENCIES
   thin (= 1.5.0)
   uglifier (>= 1.0.3)
   webrat (= 0.7.3)
+  will_paginate (= 3.0.3)
