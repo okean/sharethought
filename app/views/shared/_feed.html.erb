@@ -1,0 +1,6 @@
+<% unless @feed_items.empty? %>
+  <table class="microposts" summary="User feed status">
+    <%= render partial: 'shared/feed_item', collection: @feed_items %>
+  </table>
+  <%= render 'shared/pagination', object: @feed_items %>
+<% end %>

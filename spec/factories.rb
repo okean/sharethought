@@ -6,6 +6,11 @@ FactoryGirl.define do
     password_confirmation "foobar"
   end
   
+  factory :micropost do
+    user
+    content "some content"
+  end
+  
   sequence :email do |n|
     "test_#{n}@user.com"
   end

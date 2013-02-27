@@ -117,6 +117,7 @@ describe User do
     end
   end
   describe "admin attribute" do
+    
     before(:each) do
       @user = User.create!(@attr)
     end
@@ -132,6 +133,47 @@ describe User do
     it "should be convertible to an admin" do
       @user.toggle!(:admin)
       @user.should be_admin
+    end
+  end
+  
+  describe "micropost association" do
+    before(:each) do
+      @user = User.create!(@attr)
+      @mp1 = FactoryGirl.create(:micropost, user: @user, created_at: 1.day.ago)
+      @mp2 = FactoryGirl.create(:micropost, user: @user, created_at: 1.hour.ago)
+    end
+    
+    it "should have a microposts attribute" do
+      @user.should respond_to(:microposts)
+    end
+    
+    it "should have right microposts in the right order" do
+      @user.microposts.should == [@mp2, @mp1]
+    end
+    
+    it "should destroy associated miroposts" do
+      @user.destroy
+      [@mp1, @mp2].each do |micropost|
+        Micropost.find_by_id(micropost.id).should be_nil
+      end
+    end
+    
+    describe "status feed" do
+      
+      it "should have a feed" do
+        @user.should respond_to(:feed)
+      end
+      
+       it "should include user's microposts" do
+         @user.feed.should include(@mp1)
+         @user.feed.should include(@mp2)
+       end
+       
+       it "should not include a different user's microposts" do
+         @mp3 = FactoryGirl.create(:micropost, user: FactoryGirl.create(
+                                   :user, email: FactoryGirl.generate(:email)))
+         @user.feed.should_not include(@mp3)
+       end
     end
   end
 end

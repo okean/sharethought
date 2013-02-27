@@ -39,6 +39,10 @@ module SessionsHelper
     redirect_to root_path if signed_in?
   end
   
+  def authenticate
+    deny_access unless signed_in?
+  end
+  
   private
   
     def user_from_remember_token
